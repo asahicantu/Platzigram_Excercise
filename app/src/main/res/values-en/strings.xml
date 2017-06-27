@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Platzigram</string>
+    <string name="hint_userName">User Name</string>
+    <string name="text_btnLogin">Login</string>
+    <string name="text_doNotHaveAccount">Do not have an account?</string>
+    <string name="text_createAccountNow"><u>Create one now!</u></string>
+    <string name="text_createAccount"><u>CreateAccount</u></string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirmPassword">Confirm Password</string>
+    <string name="text_cancel">Cancel</string>
+</resources>
