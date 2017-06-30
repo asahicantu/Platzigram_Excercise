@@ -6,16 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@color/colorPrimary"
+    android:background="@color/Primary"
     tools:context="com.asahicantu.platzigram_excercise.LoginActivity">
-
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -69,6 +67,7 @@
                     android:id="@+id/btnLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:onClick="login"
                     android:text="@string/text_btnLogin"
                     android:theme="@style/RaisedButtonDark" />
 
@@ -77,24 +76,23 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <android.support.v7.widget.AppCompatTextView
+                    <TextView
                         android:id="@+id/doNotHaveAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/marginRight"
+                        android:theme="@style/StandardWhiteTextBold"
                         android:text="@string/text_doNotHaveAccount"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/textSize_createAccount" />
-
-                    <android.support.v7.widget.AppCompatTextView
+                        />
+                    <TextView
                         android:id="@+id/txtCreateAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/doNotHaveAccount"
                         android:text="@string/text_createAccountNow"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/textSize_createAccount"
-                        android:textStyle="bold" />
+                        android:theme="@style/StandardWhiteTextBold"
+                        android:layout_toRightOf="@+id/doNotHaveAccount"
+                        android:onClick="newAccount">
+                    </TextView>
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>

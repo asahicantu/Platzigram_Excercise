@@ -2,48 +2,75 @@
 <resources>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimary</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/Primary</item>
+        <item name="colorPrimaryDark">@color/Primary</item>
+        <item name="colorAccent">@color/Accent</item>
     </style>
 
     <style name="WhiteTextInputEditText">
-        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/White</item>
         <item name="android:textSize">@dimen/loginEditText_textSize</item>
-        <item name="android:textColorHighlight">@color/colorWhite</item>
-        <item name="android:color">@color/colorWhite</item>
-        <item name="android:colorFocusedHighlight">@color/colorWhite</item>
-
+        <item name="android:color">@color/White</item>
+        <item name="android:colorFocusedHighlight">@color/White</item>
     </style>
 
 
     <style name="EditTextWhite" parent="TextAppearance.AppCompat">
-        <item name="android:textColorHint">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/White</item>
         <item name="android:textSize">@dimen/loginEditText_textSize</item>
-        <item name="android:textColorPrimary">@color/colorWhite</item>
-        <item name="colorAccent">@color/colorWhite</item>
-        <item name="colorControlNormal">@color/colorWhite</item>
-        <item name="colorControlActivated">@color/colorWhite</item>
+        <item name="android:textColorPrimary">@color/White</item>
+        <item name="colorAccent">@color/White</item>
+        <item name="colorControlNormal">@color/White</item>
+        <item name="colorControlActivated">@color/White</item>
     </style>
 
     <style name="EditTextBlack" parent="TextAppearance.AppCompat">
-        <item name="android:textColorHint">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/Black</item>
         <item name="android:textSize">@dimen/loginEditText_textSize</item>
-        <item name="android:textColorPrimary">@color/colorBlack</item>
-        <item name="colorAccent">@color/colorBlack</item>
-        <item name="colorControlNormal">@color/colorBlack</item>
-        <item name="colorControlActivated">@color/colorBlack</item>
+        <item name="android:textColorPrimary">@color/Black</item>
+        <item name="colorAccent">@color/Black</item>
+        <item name="colorControlNormal">@color/Black</item>
+        <item name="colorControlActivated">@color/Black</item>
     </style>
 
     <style name="RaisedButtonDark" parent="Theme.AppCompat.Light">
-        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
-        <item name="colorControlHighlight">@color/colorPrimary</item>
-        <item name="android:textColor">@color/colorWhite</item>
+        <item name="colorButtonNormal">@color/PrimaryDark</item>
+        <item name="colorControlHighlight">@color/Primary</item>
+        <item name="android:textColor">@color/White</item>
     </style>
 
     <style name="RaisedButtonLight" parent="Theme.AppCompat.Light">
-        <item name="colorButtonNormal">@color/colorSecondaryLight</item>
-        <item name="android:textColor">@color/colorBlack</item>
+        <item name="colorButtonNormal">@color/SecondaryLight</item>
+        <item name="android:textColor">@color/Black</item>
+    </style>
+
+    <style name="StandardWhiteText">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/textSize_createAccount</item>
+    </style>
+
+    <style name="StandardWhiteTextBold" parent="StandardWhiteText">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/textSize_createAccount</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="CardViewUserName" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/cardViewFirstWord_textSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardViewCreation" parent="CardViewUserName">
+        <item name="android:textSize">@dimen/cardViewCreation_textSize</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="CardViewLike" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">@dimen/cardViewLike_textSize</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 

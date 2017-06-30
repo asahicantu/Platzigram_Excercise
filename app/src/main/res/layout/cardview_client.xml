@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cardView_height"
+    cardView:cardCornerRadius="@dimen/cardView_cornerRadius"
+    >
+    <!--tools:context="com.asahicantu.platzigram_excercise.View.ClientCardView"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/imgUSer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image"
+            android:scaleType="centerCrop"/>
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/textContentDetail_padding_horizontal">
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clientCarView_txtUserName_sample"
+                android:theme="@style/CardViewUserName"
+                />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtCreation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clientCarView_txtUserName_sample"
+                android:theme="@style/CardViewUserName"
+
+                />
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/chkLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/heart"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/txtLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CardViewLike"
+                    android:text="@string/clientCarView_txtLke_sample"
+                    />
+            </android.support.v7.widget.LinearLayoutCompat>
+
+
+        </android.support.v7.widget.LinearLayoutCompat>
+    </FrameLayout>
+</android.support.v7.widget.CardView>

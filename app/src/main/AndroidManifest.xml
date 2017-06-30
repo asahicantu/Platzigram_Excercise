@@ -3,7 +3,6 @@
     package="com.asahicantu.platzigram_excercise">
 
     <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.platzi.platzigram.CreateAccountActivity"
+            android:name=".activity.CreateAccountActivity"
             android:label="@string/title_activity_create_account"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme">
@@ -26,6 +25,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.asahicantu.platzigram_excercise.LoginActivity" />
         </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".view.ClientCardView"></activity>
     </application>
 
 </manifest>

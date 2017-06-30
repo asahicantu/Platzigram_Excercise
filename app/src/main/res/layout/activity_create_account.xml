@@ -6,65 +6,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_excercise.CreateAccountActivity">
-    <include layout="@layout/fragment_toolbar" />
+    tools:context="com.asahicantu.platzigram_excercise.activity.CreateAccountActivity">
+    <include layout="@layout/action_toolbar" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin">
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/EditTextBlack">
+
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/txtCreateAccountUserName"
+                    android:id="@+id/txtMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_Mail"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextBlack">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtUser"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_userName"
                     />
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/EditTextBlack">
+
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/txtCreateAccountPassword"
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_Name"
+                     />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextBlack" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/txtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_password"
-                    />
+                    android:inputType="textPassword"/>
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/EditTextBlack">
+
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/txtConfirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_confirmPassword"
+                    android:inputType="textPassword"
                     />
             </android.support.design.widget.TextInputLayout>
-            <RelativeLayout
+
+            <Button
+                android:id="@+id/BtnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center">
-                <Button
-                    android:id="@+id/BtnCreateAccount"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:theme="@style/RaisedButtonLight"
-                    android:text="@string/text_createAccount"/>
-            </RelativeLayout>
+                android:text="@string/text_createAccount"
+                android:theme="@style/RaisedButtonLight"
+                android:onClick="createAccount"/>
         </LinearLayout>
     </ScrollView>
-
-
-
 </android.support.design.widget.CoordinatorLayout>
