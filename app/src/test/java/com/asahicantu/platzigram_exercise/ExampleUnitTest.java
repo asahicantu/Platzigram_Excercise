@@ -1,4 +1,4 @@
-package com.asahicantu.platzigram_excercise;
+package com.asahicantu.platzigram_exercise;
 
 import org.junit.Test;
 

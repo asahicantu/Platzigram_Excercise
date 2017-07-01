@@ -1,4 +1,4 @@
-package com.asahicantu.platzigram_excercise.model;
+package com.asahicantu.platzigram_exercise.model;
 
 import android.support.v7.widget.RecyclerView;
 

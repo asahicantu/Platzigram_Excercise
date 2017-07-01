@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asahicantu.platzigram_excercise.fragment.ClientFragment">
+    tools:context="com.asahicantu.platzigram_exercise.fragment.ClientFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

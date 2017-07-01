@@ -1,13 +1,89 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asahicantu.platzigram_excercise.fragment.ProfileFragment">
+    tools:context="com.asahicantu.platzigram_exercise.fragment.ProfileFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/appbarLayout_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/Primary"
+        >
 
-</FrameLayout>
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/Primary"
+            >
+            
+            <TextView
+                android:id="@+id/txtUserNameProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clientCarView_txtUserName_sample"
+                android:textSize="@dimen/userNameProfile_textSize"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+
+
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pictureProfileRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/circleImageProfile_image"
+        android:layout_height="@dimen/circleImageProfile_image"
+        android:src="@drawable/image"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="@dimen/circleImageProfile_marginTop"
+        android:elevation="@dimen/circleImageProfile_elevation"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/appBar"
+        app:dependType="y"
+        app:dependTargetY="@dimen/circleImageProfile_limitY"
+        app:targetX="@dimen/activity_horizontal_margin"
+        app:targetY="@dimen/circleImageProfile_marginTopToolbar"
+        app:targetWidth="@dimen/circleImageToolbar_width"
+        app:targetHeight="@dimen/circleImageToolbar_width"
+        />
+    <TextView
+        android:id="@+id/userNameToolbarProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clientCarView_txtUserName_sample"
+        android:textSize="@dimen/cardViewFirstWord_textSize"
+        android:elevation="@dimen/circleImageProfile_elevation"
+        android:layout_marginLeft="@dimen/userNameToolbarProfile_marginLeft"
+        android:layout_marginTop="@dimen/userNameToolbarProfile_marginTop"
+        android:gravity="center_vertical"
+        android:textColor="@color/White"
+        android:alpha="0"
+        app:layout_behavior="com.zoonref.SimpleViewBehavior"
+        app:dependsOn="@+id/appBar"
+        app:dependType="y"
+        app:dependTargetY="@dimen/usernameToolbarProfile_limitY_"
+        app:targetY="@dimen/usernameToolbarProfile_limitY_marginTopTargetY"
+        app:targetAlpha="1"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

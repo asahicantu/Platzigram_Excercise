@@ -17,4 +17,5 @@
     <string name="tab_profile">Profile</string>
     <string name="text_cancel">Cancel</string>
     <string name="txtCreation_sample">Asahi Cantu</string>
+    <string name="signOut">Sign Out</string>
 </resources>

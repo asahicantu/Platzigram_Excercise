@@ -1,24 +1,31 @@
-package com.asahicantu.platzigram_excercise.fragment;
+package com.asahicantu.platzigram_exercise.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.asahicantu.platzigram_excercise.R;
+import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.adapter.PictureAdapterRecyclerView;
+import com.asahicantu.platzigram_exercise.model.Picture;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ClientFragment.OnFragmentInteractionListener} interface
+ * {@link HomeFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ClientFragment#newInstance} factory method to
+ * Use the {@link HomeFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ClientFragment extends Fragment  {
+public class HomeFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +37,7 @@ public class ClientFragment extends Fragment  {
 
     private OnFragmentInteractionListener mListener;
 
-    public ClientFragment() {
+    public HomeFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +47,11 @@ public class ClientFragment extends Fragment  {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ClientFragment.
+     * @return A new instance of fragment HomeFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ClientFragment newInstance(String param1, String param2) {
-        ClientFragment fragment = new ClientFragment();
+    public static HomeFragment newInstance(String param1, String param2) {
+        HomeFragment fragment = new HomeFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +72,26 @@ public class ClientFragment extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_client, container, false);
+        Activity activity = getActivity();
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
+
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(activity);
+        picturesRecycler .setLayoutManager(mLayoutManager);
+
+        ArrayList<Picture> pics = buildPictures();
+        PictureAdapterRecyclerView pictureAdapterRecyclerView =new PictureAdapterRecyclerView(pics, R.layout.cardview_client, getActivity());
+        picturesRecycler.setAdapter(pictureAdapterRecyclerView);
+        return view;
+    }
+
+    public ArrayList<Picture> buildPictures(){
+        ArrayList<Picture> pictures = new ArrayList<>();
+        pictures.add(new Picture("http://www.novalandtours.com/images/guide/guilin.jpg", "Uriel Ramírez", "4 días", "3 Me Gusta"));
+        pictures.add(new Picture("http://www.enjoyart.com/library/landscapes/tuscanlandscapes/large/Tuscan-Bridge--by-Art-Fronckowiak-.jpg", "Juan Pablo", "3 días", "10 Me Gusta"));
+        pictures.add(new Picture("http://www.educationquizzes.com/library/KS3-Geography/river-1-1.jpg", "Anahi Salgado", "2 días", "9 Me Gusta"));
+        return pictures;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -81,7 +107,7 @@ public class ClientFragment extends Fragment  {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            /*throw new RuntimeException(context.toString()                     + " must implement OnFragmentInteractionListener");*/
+            /*throw new RuntimeException(context.toString()                  + " must implement OnFragmentInteractionListener");*/
         }
     }
 

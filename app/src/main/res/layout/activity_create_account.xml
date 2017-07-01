@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_excercise.activity.CreateAccountActivity">
+    tools:context="com.asahicantu.platzigram_exercise.activity.CreateAccountActivity">
     <include layout="@layout/action_toolbar" />
 
     <ScrollView

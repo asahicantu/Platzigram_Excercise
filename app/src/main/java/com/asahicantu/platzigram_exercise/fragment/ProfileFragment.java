@@ -1,14 +1,26 @@
-package com.asahicantu.platzigram_excercise.fragment;
+package com.asahicantu.platzigram_exercise.fragment;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.asahicantu.platzigram_excercise.R;
+import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.adapter.PictureAdapterRecyclerView;
+import com.asahicantu.platzigram_exercise.model.Picture;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,6 +45,17 @@ public class ProfileFragment extends Fragment {
     public ProfileFragment() {
         // Required empty public constructor
     }
+
+
+    public void showToolbar(String title, boolean upButton,View view){
+        Toolbar toolbar = (Toolbar)view.findViewById(R.id.appBar);
+        AppCompatActivity activity =(AppCompatActivity)getActivity();
+        activity.setSupportActionBar(toolbar);
+        ActionBar actBar= activity.getSupportActionBar();
+        actBar.setTitle(title);
+        actBar.setDisplayHomeAsUpEnabled(upButton);
+    }
+
 
     /**
      * Use this factory method to create a new instance of
@@ -65,7 +88,29 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view =inflater.inflate(R.layout.fragment_profile, container, false);
+        Activity activity = getActivity();
+        showToolbar("",false,view);
+
+        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureProfileRecycler);
+
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(activity);
+        picturesRecycler .setLayoutManager(mLayoutManager);
+
+        ArrayList<Picture> pics = buildPictures();
+        PictureAdapterRecyclerView pictureAdapterRecyclerView =new PictureAdapterRecyclerView(pics, R.layout.cardview_client, getActivity());
+        picturesRecycler.setAdapter(pictureAdapterRecyclerView);
+
+
+        return view;
+    }
+
+    public ArrayList<Picture> buildPictures(){
+        ArrayList<Picture> pictures = new ArrayList<>();
+        pictures.add(new Picture("http://www.novalandtours.com/images/guide/guilin.jpg", "Uriel Ramírez", "4 días", "3 Me Gusta"));
+        pictures.add(new Picture("http://www.enjoyart.com/library/landscapes/tuscanlandscapes/large/Tuscan-Bridge--by-Art-Fronckowiak-.jpg", "Juan Pablo", "3 días", "10 Me Gusta"));
+        pictures.add(new Picture("http://www.educationquizzes.com/library/KS3-Geography/river-1-1.jpg", "Anahi Salgado", "2 días", "9 Me Gusta"));
+        return pictures;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

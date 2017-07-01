@@ -1,11 +1,11 @@
-package com.asahicantu.platzigram_excercise.activity;
+package com.asahicantu.platzigram_exercise.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.asahicantu.platzigram_excercise.R;
+import com.asahicantu.platzigram_exercise.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
 

@@ -6,4 +6,5 @@
     <color name="Accent">#7C4DFF</color>
     <color name="White">#FFFFFF</color>
     <color name="Black">#000000</color>
+    <color name="CardBackground">#53292929</color>
 </resources>

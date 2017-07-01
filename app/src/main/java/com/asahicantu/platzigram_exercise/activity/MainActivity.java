@@ -1,4 +1,4 @@
-package com.asahicantu.platzigram_excercise.activity;
+package com.asahicantu.platzigram_exercise.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -14,12 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.asahicantu.platzigram_excercise.fragment.HomeFragment;
-import com.asahicantu.platzigram_excercise.fragment.ProfileFragment;
-import com.asahicantu.platzigram_excercise.fragment.SearchFragment;
-import com.asahicantu.platzigram_excercise.R;
+import com.asahicantu.platzigram_exercise.fragment.HomeFragment;
+import com.asahicantu.platzigram_exercise.fragment.ProfileFragment;
+import com.asahicantu.platzigram_exercise.fragment.SearchFragment;
+import com.asahicantu.platzigram_exercise.R;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
@@ -34,34 +33,32 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        BottomBar bottomBar = (BottomBar) findViewById(R.id.mainBottombar);
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.mainBottomBar);
         bottomBar.setDefaultTab(R.id.home);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
                                              @Override
                                              public void onTabSelected(@IdRes int tabId) {
+                                                 Fragment fragment = null;
+                                                 int resourceTitle = 0;
                                                  switch (tabId) {
                                                      case R.id.home:
-                                                         HomeFragment homeFragment = new HomeFragment();
-                                                         getSupportFragmentManager().beginTransaction().replace(R.id.content_main, homeFragment)
-                                                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                                                 .addToBackStack(null).commit();
-                                                        showToolbar(getResources().getString(R.string.tab_home), false);
-
+                                                         fragment = HomeFragment.newInstance(null,null);
+                                                         resourceTitle = R.string.tab_home;
                                                          break;
                                                      case R.id.profile:
-                                                         ProfileFragment profileFragment = new ProfileFragment();
-                                                         getSupportFragmentManager().beginTransaction().replace(R.id.content_main, profileFragment)
-                                                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                                                 .addToBackStack(null).commit();
-                                                         showToolbar(getResources().getString(R.string.tab_profile), false);
+                                                         fragment = ProfileFragment.newInstance(null,null);
+                                                         resourceTitle = R.string.tab_profile;
                                                          break;
                                                      case R.id.search:
-                                                         SearchFragment searchFragment = new SearchFragment();
-                                                         getSupportFragmentManager().beginTransaction().replace(R.id.content_main, searchFragment)
-                                                                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                                                                 .addToBackStack(null).commit();
-                                                         showToolbar(getResources().getString(R.string.tab_search), false);
+                                                         fragment = SearchFragment.newInstance(null,null);
+                                                         resourceTitle = R.string.tab_search;
                                                          break;
+                                                 }
+                                                 if(fragment != null){
+                                                     getSupportFragmentManager().beginTransaction().replace(R.id.mainContainer, fragment)
+                                                             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                                                             .addToBackStack(null).commit();
+                                                     showToolbar(getResources().getString(resourceTitle), false);
                                                  }
                                              }
                                          });

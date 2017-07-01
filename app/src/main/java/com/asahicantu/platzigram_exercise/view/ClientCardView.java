@@ -1,8 +1,8 @@
-package com.asahicantu.platzigram_excercise.view;
+package com.asahicantu.platzigram_exercise.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.asahicantu.platzigram_excercise.R;
+import com.asahicantu.platzigram_exercise.R;
 
 public class ClientCardView extends AppCompatActivity {
 

@@ -5,5 +5,12 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_signout"
+        android:orderInCategory="101"
+        android:title="@string/signOut"
+        android:icon="@drawable/ic_cancel"
         app:showAsAction="never" />
 </menu>

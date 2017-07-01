@@ -1,4 +1,4 @@
-package com.asahicantu.platzigram_excercise.adapter;
+package com.asahicantu.platzigram_exercise.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.asahicantu.platzigram_excercise.R;
-import com.asahicantu.platzigram_excercise.model.Picture;
-import com.asahicantu.platzigram_excercise.view.PictureDetailActivity;
+import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.model.Picture;
+import com.asahicantu.platzigram_exercise.activity.PictureDetailActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

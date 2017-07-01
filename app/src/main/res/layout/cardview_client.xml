@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/cardView_height"
     cardView:cardCornerRadius="@dimen/cardView_cornerRadius"
+    android:layout_marginTop="@dimen/cardViewLike_marginTop"
+    android:elevation="@dimen/cardview_default_elevation"
     >
     <!--tools:context="com.asahicantu.platzigram_excercise.View.ClientCardView"-->
     <FrameLayout
@@ -21,7 +23,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="bottom"
-            android:padding="@dimen/textContentDetail_padding_horizontal">
+            android:padding="@dimen/textContentDetail_padding_horizontal"
+            android:background="@color/CardBackground">
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/txtUserName"
                 android:layout_width="wrap_content"
@@ -33,8 +36,8 @@
                 android:id="@+id/txtCreation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/clientCarView_txtUserName_sample"
-                android:theme="@style/CardViewUserName"
+                android:text="@string/clientCarView_txtCreation_sample"
+                android:theme="@style/CardViewCreation"
 
                 />
             <android.support.v7.widget.LinearLayoutCompat
@@ -45,18 +48,20 @@
                     android:id="@+id/chkLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:button="@drawable/heart"
-                    />
+                    android:button="@drawable/like_checkbox_selector" />
+
                 <android.support.v7.widget.AppCompatTextView
                     android:id="@+id/txtLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:theme="@style/CardViewLike"
+                    android:layout_marginLeft="@dimen/cardView_like_horizontalMargin"
                     android:text="@string/clientCarView_txtLke_sample"
                     />
             </android.support.v7.widget.LinearLayoutCompat>
 
 
         </android.support.v7.widget.LinearLayoutCompat>
+
     </FrameLayout>
 </android.support.v7.widget.CardView>
