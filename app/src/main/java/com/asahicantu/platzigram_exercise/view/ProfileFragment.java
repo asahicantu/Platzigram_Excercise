@@ -1,10 +1,10 @@
-package com.asahicantu.platzigram_exercise.fragment;
+package com.asahicantu.platzigram_exercise.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,12 +20,12 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link HomeFragment.OnFragmentInteractionListener} interface
+ * {@link ProfileFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class ProfileFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public HomeFragment() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -47,11 +47,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static ProfileFragment newInstance(String param1, String param2) {
+        ProfileFragment fragment = new ProfileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -72,14 +72,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Activity activity = getActivity();
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-
-        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
-
+        View view =inflater.inflate(R.layout.fragment_profile, container, false);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        String title = getString(R.string.tab_profile);
+        showToolbar(title, false, view, activity);
+        RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureProfileRecycler);
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(activity);
         picturesRecycler .setLayoutManager(mLayoutManager);
-
         ArrayList<Picture> pics = buildPictures();
         PictureAdapterRecyclerView pictureAdapterRecyclerView =new PictureAdapterRecyclerView(pics, R.layout.cardview_client, getActivity());
         picturesRecycler.setAdapter(pictureAdapterRecyclerView);
@@ -107,7 +106,7 @@ public class HomeFragment extends Fragment {
         if (context instanceof OnFragmentInteractionListener) {
             mListener = (OnFragmentInteractionListener) context;
         } else {
-            /*throw new RuntimeException(context.toString()                  + " must implement OnFragmentInteractionListener");*/
+            /*throw new RuntimeException(context.toString() + " must implement OnFragmentInteractionListener");*/
         }
     }
 

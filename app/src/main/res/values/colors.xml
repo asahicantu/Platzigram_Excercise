@@ -7,4 +7,5 @@
     <color name="White">#FFFFFF</color>
     <color name="Black">#000000</color>
     <color name="CardBackground">#53292929</color>
+    <color name="Error">#e79696</color>
 </resources>

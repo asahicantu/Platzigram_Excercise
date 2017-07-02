@@ -2,32 +2,42 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="appbarLayout_height">256dp</dimen>
+    <dimen name="appbarLayout_height">200dp</dimen>
     <dimen name="bottomBar_height">70dp</dimen>
+    <dimen name="bottomBar_width">70dp</dimen>
     <dimen name="actionBarSize">50dp</dimen>
     <dimen name="cardViewFirstWord_textSize">18sp</dimen>
     <dimen name="cardViewCreation_textSize">16sp</dimen>
     <dimen name="cardViewLike_marginTop">10dp</dimen>
+
     <dimen name="cardViewLike_textSize">15sp</dimen>
     <dimen name="cardViewLike_size">30dp</dimen>
     <dimen name="cardViewTimeCard_marginLeft">5dp</dimen>
     <dimen name="cardViewUserName_textSize">25sp</dimen>
     <dimen name="cardView_cornerRadius">4dp</dimen>
-    <dimen name="cardView_like_horizontalMargin">8dp</dimen>
     <dimen name="cardView_height">200dp</dimen>
+    <dimen name="cardViewLike_horizontalMargin">5dp</dimen>
 
 
     <dimen name="circleImageProfile_elevation">10dp</dimen>
     <dimen name="circleImageProfile_image">160dp</dimen>
-    <dimen name="circleImageProfile_limitY">-206dp</dimen>
-    <dimen name="circleImageProfile_marginTop">30dp</dimen>
-    <dimen name="circleImageProfile_marginTopToolbar">-15dp</dimen>
-    <dimen name="circleImageToolbar_width">40dp</dimen>
+    <dimen name="circleImageProfile_targetX">05dp</dimen>
+    <dimen name="circleImageProfile_targetY">10dp</dimen>
+    <dimen name="circleImageProfile_dependTargetY">200dp</dimen>
+    <dimen name="circleImageProfile_marginTop">20dp</dimen>
+    <dimen name="circleImageProfile_width">40dp</dimen>
+    <dimen name="circleImageProfile_height">40dp</dimen>
+
+    <dimen name="textError_textSize">18sp</dimen>
+    <dimen name="textError_marginTop">15dp</dimen>
+
+
     <dimen name="createAccountEditText_margin">10dp</dimen>
     <dimen name="createAccountEditText_textSize">16sp</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-    <dimen name="ImageDetailTitle_paddingTop">20dp</dimen>
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="padding_Top">20dp</dimen>
     <dimen name="likeNumberDetail_textSize">15sp</dimen>
     <dimen name="loginEditText_padding_horizontal">32dp</dimen>
     <dimen name="loginEditText_textSize">22sp</dimen>
@@ -43,12 +53,14 @@
     <dimen name="usernameToolbarProfile_limitY_">-250dp</dimen>
     <dimen name="usernameToolbarProfile_limitY_marginTopTargetY">-5dp</dimen>
     <dimen name="marginRight">16dp</dimen>
-
+    <dimen name="marginTop">10dp</dimen>
+    <dimen name="toolbarTitle_textSize">30sp</dimen>
     <dimen name="textSize_createAccount">16sp</dimen>
-    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="app_bar_heightapp_bar_height">200dp</dimen>
     <dimen name="item_width">200dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">16dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="search_picture_height">30dp</dimen>
 
 </resources>

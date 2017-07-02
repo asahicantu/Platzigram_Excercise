@@ -1,4 +1,4 @@
-package com.asahicantu.platzigram_exercise.activity;
+package com.asahicantu.platzigram_exercise.view;
 
 import android.content.Intent;
 import android.os.Bundle;

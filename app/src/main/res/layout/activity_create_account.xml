@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_exercise.activity.CreateAccountActivity">
+    tools:context="com.asahicantu.platzigram_exercise.view.CreateAccountActivity">
     <include layout="@layout/action_toolbar" />
 
     <ScrollView
@@ -91,9 +91,9 @@
                 android:id="@+id/BtnCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="createAccount"
                 android:text="@string/text_createAccount"
-                android:theme="@style/RaisedButtonLight"
-                android:onClick="createAccount"/>
+                android:theme="@style/RaisedButtonLight" />
         </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>

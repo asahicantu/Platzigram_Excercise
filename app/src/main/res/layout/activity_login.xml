@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     android:background="@color/Primary"
-    tools:context="com.asahicantu.platzigram_exercise.LoginActivity">
+    android:fitsSystemWindows="true"
+    tools:context="com.asahicantu.platzigram_exercise.login.view.LoginActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:background="@drawable/banner" />
+                android:background="@drawable/banner"
+                android:onClick="goWebSite" />
         </RelativeLayout>
 
         <ScrollView
@@ -71,6 +72,16 @@
                     android:text="@string/text_btnLogin"
                     android:theme="@style/RaisedButtonDark" />
 
+                <TextView
+                    android:id="@+id/txtError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/textError_marginTop"
+                    android:gravity="center"
+                    android:text="@string/error"
+                    android:textColor="@color/Error"
+                    android:textSize="@dimen/textError_textSize" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -81,21 +92,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="@dimen/marginRight"
-                        android:theme="@style/StandardWhiteTextBold"
                         android:text="@string/text_doNotHaveAccount"
+                        android:theme="@style/StandardWhiteTextBold"
                         />
                     <TextView
                         android:id="@+id/txtCreateAccount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/text_createAccountNow"
-                        android:theme="@style/StandardWhiteTextBold"
                         android:layout_toRightOf="@+id/doNotHaveAccount"
-                        android:onClick="newAccount">
+                        android:onClick="createAccount"
+                        android:text="@string/text_createAccountNow"
+                        android:theme="@style/StandardWhiteTextBold">
                     </TextView>
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
 
     </LinearLayout>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/progressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:indicatorName="BallPulseIndicator" />
 </android.support.design.widget.CoordinatorLayout>

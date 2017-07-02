@@ -18,4 +18,8 @@
     <string name="text_cancel">Cancel</string>
     <string name="txtCreation_sample">Asahi Cantu</string>
     <string name="signOut">Sign Out</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="message_userNameNotFoud">User not found</string>
+    <string name="message_userNameOrPasswordNull">User name or password cannot be empty</string>
 </resources>

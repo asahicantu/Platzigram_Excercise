@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_exercise.activity.PictureDetailActivity">
+    tools:context="com.asahicantu.platzigram_exercise.view.PictureDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
@@ -20,19 +20,19 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/Primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             >
 
             <ImageView
                 android:id="@+id/imageHeader"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
                 android:background="@drawable/image"
-                app:layout_collapseMode="parallax"
                 android:fitsSystemWindows="true"
-                android:transitionName="@string/transitionname_picture"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/transition_picture"
+                app:layout_collapseMode="parallax"
                 />
 
 
@@ -40,8 +40,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                 app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
 
 
                 />
@@ -67,10 +67,10 @@
                 android:id="@+id/userNameDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/userNameDetail_textSize"
-                android:text="@string/clientCarView_txtUserName_sample"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_vertical_margin"
+                android:text="@string/clientCarView_txtUserName_sample"
+                android:textSize="@dimen/userNameDetail_textSize"
                 />
 
             <LinearLayout
@@ -85,8 +85,8 @@
                     android:id="@+id/likeNumberDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/likeNumberDetail_textSize"
                     android:text="10"
+                    android:textSize="@dimen/likeNumberDetail_textSize"
 
                     />
 
@@ -94,9 +94,9 @@
                     android:id="@+id/secondWordDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/likeNumberDetail_textSize"
-                    android:text="@string/secondword_detail"
                     android:layout_marginLeft="@dimen/secondWord_marginLeft"
+                    android:text="@string/secondword_detail"
+                    android:textSize="@dimen/likeNumberDetail_textSize"
                     />
 
             </LinearLayout>
@@ -111,22 +111,22 @@
                 android:id="@+id/titleImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/likeNumberDetail_textSize"
-                android:text="@string/titleimagedetail"
                 android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/padding_Top"
+                android:text="@string/titleimagedetail"
+                android:textSize="@dimen/likeNumberDetail_textSize"
                 android:textStyle="bold"
-                android:paddingTop="@dimen/ImageDetailTitle_paddingTop"
                 />
             <TextView
                 android:id="@+id/textContentImageDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/likeNumberDetail_textSize"
-                android:text="@string/lorem"
                 android:layout_gravity="center_horizontal"
-                android:paddingTop="@dimen/ImageDetailTitle_paddingTop"
                 android:paddingLeft="@dimen/textContentDetail_padding_horizontal"
                 android:paddingRight="@dimen/textContentDetail_padding_horizontal"
+                android:paddingTop="@dimen/padding_Top"
+                android:text="@string/lorem"
+                android:textSize="@dimen/likeNumberDetail_textSize"
                 />
 
         </LinearLayout>

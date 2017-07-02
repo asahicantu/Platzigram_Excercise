@@ -1,16 +1,16 @@
-package com.asahicantu.platzigram_exercise.activity;
+package com.asahicantu.platzigram_exercise.view;
 
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
 import android.view.View;
 
-import com.asahicantu.platzigram_exercise.utils.ToolbarUtils;
 import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.utils.ToolbarUtils;
 
 public class PictureDetailActivity extends AppCompatActivity implements ToolbarUtils {
 

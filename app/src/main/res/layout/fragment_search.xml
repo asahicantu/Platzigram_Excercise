@@ -1,13 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asahicantu.platzigram_excercise.com.asahicantu.platzigram_exercise.fragment.SearchFragment">
+    tools:context="com.asahicantu.platzigram_exercise.view.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <include layout="@layout/action_toolbar" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="@dimen/actionBarSize"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchPic"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_picture_height"
+            android:layout_marginTop="@dimen/marginTop"
+            android:inputType="text"
+            android:queryHint="@string/txtCreation_sample" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pictureSeacrchRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/marginTop" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
