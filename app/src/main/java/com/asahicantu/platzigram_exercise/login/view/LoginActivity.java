@@ -34,6 +34,13 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         setContentView(R.layout.activity_login);
         presenter = new LoginPresenterImpl(this);
         initializeControls();
+
+        initFake();
+    }
+
+    private void initFake() {
+        txtUserName.setText("Asahi");
+        txtPassword.setText("Cantu");
     }
 
     private void initializeControls() {

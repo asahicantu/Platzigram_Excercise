@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.asahicantu.platzigram_exercise.home.view.NewPostActivity">
+
+    <include layout="@layout/action_toolbar"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/actionBarSize"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noHeight"
+            android:layout_weight="6"
+            android:background="@color/CardBackground"
+            android:scaleType="centerCrop" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_weight="1.5"
+            android:theme="@style/EditTextBlack">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/message_title" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noHeight"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_weight="1.5"
+            android:theme="@style/EditTextBlack">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/message_description" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnCreatePost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/noHeight"
+            android:layout_weight="1"
+            android:onClick="createPost"
+            android:text="@string/createPost"
+            android:theme="@style/RaisedButtonDark" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

@@ -111,6 +111,12 @@
     <string name="error">Error message goes here</string>
     <string name="message_userNameNotFoud">Usuario no encontrado</string>
     <string name="message_userNameOrPasswordNull">El nombre de usuario o password no pueden estar vacios</string>
+    <string name="message_cameraNotAvailable">La camara no esta disponible</string>
+    <string name="message_title">Titulo</string>
+    <string name="message_description">Descripcion</string>
+    <string name="createPost">Crear Posrt!</string>
+    <string name="message_request_camera">Requiere uso de camara</string>
+    <string name="message_function_not_available">Funcion de camara no disponible, permisos denegados</string>
 
 
 </resources>

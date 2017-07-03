@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.home.view.HomeFragment;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 

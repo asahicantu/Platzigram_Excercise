@@ -22,4 +22,10 @@
     <string name="navigation_drawer_close">Close</string>
     <string name="message_userNameNotFoud">User not found</string>
     <string name="message_userNameOrPasswordNull">User name or password cannot be empty</string>
+    <string name="message_cameraNotAvailable">Camera is not available</string>
+    <string name="message_title">Title</string>
+    <string name="message_description">Description</string>
+    <string name="createPost">Create Posrt!</string>
+    <string name="message_request_camera">Requires use of camera</string>
+    <string name="message_function_not_available">Camera function not available, permission was denied</string>
 </resources>
