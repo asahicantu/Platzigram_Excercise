@@ -28,4 +28,9 @@
     <string name="createPost">Create Posrt!</string>
     <string name="message_request_camera">Requires use of camera</string>
     <string name="message_function_not_available">Camera function not available, permission was denied</string>
+    <string name="message_passwordMismatch">Password and confirm password mismatch</string>
+    <string name="message_wrongOrEmptyPassword">Password cannot be empty</string>
+    <string name="message_emptyUserName">User Name cannot be empty</string>
+    <string name="message_emptyMail">email cannot be empty</string>
+    <string name="message_emptyPassword">Password cannot be empty</string>
 </resources>

@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.asahicantu.platzigram_exercise.R;
 import com.asahicantu.platzigram_exercise.login.presenter.LoginPresenter;
 import com.asahicantu.platzigram_exercise.login.presenter.LoginPresenterImpl;
-import com.asahicantu.platzigram_exercise.view.CreateAccountActivity;
+import com.asahicantu.platzigram_exercise.account.view.CreateAccountActivity;
 import com.asahicantu.platzigram_exercise.view.MainActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 

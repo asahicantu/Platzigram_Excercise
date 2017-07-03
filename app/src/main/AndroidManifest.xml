@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.CreateAccountActivity"
+            android:name=".account.view.CreateAccountActivity"
             android:label="@string/title_activity_create_account"
             android:parentActivityName=".login.view.LoginActivity"
             android:theme="@style/AppTheme">

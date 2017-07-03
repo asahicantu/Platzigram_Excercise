@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_exercise.view.CreateAccountActivity">
+    tools:context="com.asahicantu.platzigram_exercise.account.view.CreateAccountActivity">
     <include layout="@layout/action_toolbar" />
 
     <ScrollView
@@ -31,19 +31,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_Mail"
-                    />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/EditTextBlack">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/txtUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/hint_userName"
                     />
             </android.support.design.widget.TextInputLayout>
 

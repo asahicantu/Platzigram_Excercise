@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import com.asahicantu.platzigram_exercise.R;
 import com.squareup.picasso.Picasso;
 
-public class NewPostActivity extends AppCompatActivity {
+public class NewPostActivity extends AppCompatActivity implements NewPostView {
 
     public static final String IMAGE_PATH = "IMAGE_PATH";
     private ImageView _imgPhoto;
