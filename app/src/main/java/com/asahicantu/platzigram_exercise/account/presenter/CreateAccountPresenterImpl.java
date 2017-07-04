@@ -1,9 +1,10 @@
 package com.asahicantu.platzigram_exercise.account.presenter;
 
+import com.asahicantu.platzigram_exercise.R;
 import com.asahicantu.platzigram_exercise.account.interactor.CreateAccountInteractor;
 import com.asahicantu.platzigram_exercise.account.interactor.CreateAccountInteractorImpl;
 import com.asahicantu.platzigram_exercise.account.view.CreateAccountView;
-import com.asahicantu.platzigram_exercise.R;
+import com.google.firebase.auth.FirebaseUser;
 
 /**
  * Created by AMoreno15 on 7/3/2017.
@@ -26,6 +27,16 @@ public class CreateAccountPresenterImpl implements  CreateAccountPresenter {
             _interactor.createAccount(userName,password,email);
         }
 
+    }
+
+    @Override
+    public void createAccountSuccess(FirebaseUser user) {
+        _view.createAccountSuccess(user);
+    }
+
+    @Override
+    public void createAccountError(String message) {
+        _view.createAccountError(message);
     }
 
     private boolean  ValidateFields(String userName, String password, String confirmPassword) {

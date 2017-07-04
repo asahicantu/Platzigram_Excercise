@@ -122,6 +122,7 @@
     <string name="message_emptyUserName">Nombre de usuario no puede estar vacío</string>
     <string name="message_emptyMail">email no puede estar vacío</string>
     <string name="message_emptyPassword">Contraseña no puede estar vacía</string>
+    <string name="message_userCreateSuccess">Usuario creado exitosamente</string>
 
 
 </resources>

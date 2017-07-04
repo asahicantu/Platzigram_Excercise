@@ -46,10 +46,11 @@
                     android:theme="@style/EditTextWhite">
 
                     <android.support.design.widget.TextInputEditText
-                        android:id="@+id/txtUserName"
+                        android:id="@+id/txtMail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/hint_userName" />
+                        android:hint="@string/hint_Mail"
+                        android:inputType="textEmailAddress" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout

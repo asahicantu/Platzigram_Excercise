@@ -11,16 +11,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.asahicantu.platzigram_exercise.R;
+import com.asahicantu.platzigram_exercise.account.view.CreateAccountActivity;
 import com.asahicantu.platzigram_exercise.login.presenter.LoginPresenter;
 import com.asahicantu.platzigram_exercise.login.presenter.LoginPresenterImpl;
-import com.asahicantu.platzigram_exercise.account.view.CreateAccountActivity;
 import com.asahicantu.platzigram_exercise.view.MainActivity;
 import com.wang.avi.AVLoadingIndicatorView;
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
 
     private LoginPresenter presenter;
-    private TextInputEditText txtUserName;
+    private TextInputEditText txtLogin;
     private TextInputEditText txtPassword;
     private Button btnLogin;
     private AVLoadingIndicatorView progressIndicator;
@@ -39,12 +39,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     private void initFake() {
-        txtUserName.setText("Asahi");
-        txtPassword.setText("Cantu");
+        txtLogin.setText("asahicantu@gmail.com");
+        txtPassword.setText("AsahiCantu");
     }
 
     private void initializeControls() {
-        txtUserName = (TextInputEditText) findViewById(R.id.txtUserName);
+        txtLogin = (TextInputEditText) findViewById(R.id.txtMail);
         txtPassword = (TextInputEditText) findViewById(R.id.txtPassword);
         txtCreateAccount = (TextView) findViewById(R.id.txtCreateAccount);
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     }
 
     private void setControlsEnabledorDisabled(boolean enable) {
-        txtUserName.setEnabled(enable);
+        txtLogin.setEnabled(enable);
         txtPassword.setEnabled(enable);
         txtCreateAccount.setEnabled(enable);
         btnLogin.setEnabled(enable);
@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void login(View view) {
-        String userName = txtUserName.getText().toString();
+        String userName = txtLogin.getText().toString();
         String password = txtPassword.getText().toString();
         if (userName.isEmpty() || password.isEmpty()) {
             loginError(getString((R.string.message_userNameOrPasswordNull)));
@@ -112,6 +112,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void loginError(String message) {
+        hideProgressBar();
         txtError.setText(message);
         Toast.makeText(this, message, Toast.LENGTH_SHORT);
     }
