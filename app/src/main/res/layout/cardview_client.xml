@@ -8,7 +8,6 @@
     android:layout_marginTop="@dimen/cardViewLike_marginTop"
     android:elevation="@dimen/cardview_default_elevation"
     cardView:cardCornerRadius="@dimen/cardView_cornerRadius">
-    <!--tools:context="com.asahicantu.platzigram_excercise.View.ClientCardView"-->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.asahicantu.platzigram_exercise.view.PictureDetailActivity">
+    tools:context="com.kororia.fshop.post.view.PictureDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"

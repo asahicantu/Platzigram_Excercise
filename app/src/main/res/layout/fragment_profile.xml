@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asahicantu.platzigram_exercise.view.ProfileFragment">
+    tools:context="com.kororia.fshop.profile.view.ProfileFragment">
 
     <include layout="@layout/action_toolbar_parallax" />
     <de.hdodenhof.circleimageview.CircleImageView

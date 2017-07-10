@@ -1,35 +1,27 @@
 {
   "project_info": {
-    "project_number": "714910763",
-    "firebase_url": "https://platzigram-4c407.firebaseio.com",
-    "project_id": "platzigram-4c407",
-    "storage_bucket": "platzigram-4c407.appspot.com"
+    "project_number": "4845515892",
+    "firebase_url": "https://fshop-120e2.firebaseio.com",
+    "project_id": "fshop-120e2",
+    "storage_bucket": "fshop-120e2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:714910763:android:028a3315deed396d",
+        "mobilesdk_app_id": "1:4845515892:android:d8bdbabb8a95d24f",
         "android_client_info": {
-          "package_name": "com.asahicantu.platzigram_exercise"
+          "package_name": "com.kororia.fshop"
         }
       },
       "oauth_client": [
         {
-          "client_id": "714910763-nr6shi23g6h1hjvl6eic011m0g7ep468.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.asahicantu.platzigram_exercise",
-            "certificate_hash": "29997179a2a59d52141c9d4db70637630a70932f"
-          }
-        },
-        {
-          "client_id": "714910763-55ionp0mvaqmiu96t2uuid5vv8o9190g.apps.googleusercontent.com",
+          "client_id": "4845515892-fc14nbvdnb52d25i00qmn7kn150441rm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBT11mqqu5ub8H3jP0ffGKcr6UX0Q-IbWw"
+          "current_key": "AIzaSyCsanM2Qq5raDztJaRSAL03quLYX2pnRMM"
         }
       ],
       "services": {
@@ -37,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "714910763-55ionp0mvaqmiu96t2uuid5vv8o9190g.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

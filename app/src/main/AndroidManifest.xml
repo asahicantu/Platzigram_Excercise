@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.asahicantu.platzigram_exercise">
+    package="com.kororia.fshop">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.camera"
-        android:required="false"></uses-feature>
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.camera2"
-        android:required="false"></uses-feature>
+        android:required="false" />
 
-
-    <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- android:roundIcon="@mipmap/ic_launcher_round" -->
     <application
-        android:name="PlatzigramApplication"
+        android:name="com.kororia.fshop.FShopApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -25,15 +35,15 @@
         android:theme="@style/AppTheme">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.asahicantu.platzigram_exercise"
+            android:authorities="com.kororia.fshop"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_path"></meta-data>
-
+                android:resource="@xml/file_path" />
         </provider>
-        <activity android:name=".login.view.LoginActivity">
+
+        <activity android:name="com.kororia.fshop.login.view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,29 +51,48 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".account.view.CreateAccountActivity"
+            android:name="com.kororia.fshop.login.view.CreateAccountActivity"
             android:label="@string/title_activity_create_account"
-            android:parentActivityName=".login.view.LoginActivity"
+            android:parentActivityName="com.kororia.fshop.login.view.LoginActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.asahicantu.platzigram_exercise.login.view.LoginActivity" />
+                android:value="com.kororia.fshop.login.view.LoginActivity" />
         </activity>
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.kororia.fshop.view.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
-        <activity android:name=".view.ClientCardView" />
         <activity
-            android:name=".view.PictureDetailActivity"
+            android:name="com.kororia.fshop.post.view.PictureDetailActivity"
             android:label="@string/title_activity_picture_detail"
-            android:parentActivityName=".view.MainActivity"
+            android:parentActivityName="com.kororia.fshop.view.MainActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.asahicantu.platzigram_exercise.view.MainActivity" />
+                android:value="com.kororia.fshop.view.MainActivity" />
         </activity>
-        <activity android:name=".home.view.NewPostActivity"></activity>
+        <activity android:name="com.kororia.fshop.post.view.NewPostActivity" />
+
+        <service android:name="com.kororia.fshop.FbMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
     </application>
 
 </manifest>

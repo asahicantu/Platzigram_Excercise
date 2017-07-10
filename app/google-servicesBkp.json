@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "885443220323",
+    "firebase_url": "https://fshop-1e71b.firebaseio.com",
+    "project_id": "fshop-1e71b",
+    "storage_bucket": "fshop-1e71b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885443220323:android:d8bdbabb8a95d24f",
+        "android_client_info": {
+          "package_name": "com.kororia.fshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "885443220323-rqh6eje771ajioa42befnc778bra9kag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kororia.fshop",
+            "certificate_hash": "29997179a2a59d52141c9d4db70637630a70932f"
+          }
+        },
+        {
+          "client_id": "885443220323-tv0801n2q5n8c9irhlhoes066j8iqgvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbugY8E3xGQ60MgbNJ1Oc2zjzLZ6Fjo1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "885443220323-tv0801n2q5n8c9irhlhoes066j8iqgvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

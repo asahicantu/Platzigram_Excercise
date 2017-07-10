@@ -33,5 +33,10 @@
     <string name="message_emptyUserName">User Name cannot be empty</string>
     <string name="message_emptyMail">email cannot be empty</string>
     <string name="message_emptyPassword">Password cannot be empty</string>
+    <string name="message_emptyConfirmPassword">Confirm Password cannot be empty</string>
     <string name="message_userCreateSuccess">User was successfully created</string>
+    <string name="message_login_success">Welcome back!</string>
+    <string name="myLocation">My location</string>
+    <string name="nav_my_location">My location</string>
+    <string name="message_noNetworkAvailable">No network availavle</string>
 </resources>
